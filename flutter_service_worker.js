@@ -4,7 +4,7 @@ const RESOURCES = {
   "index.html": "183739345f91ff8ff906838c30227022",
 "/": "183739345f91ff8ff906838c30227022",
 "main.dart.js.deps": "b9aa757d8e2fc593248f6a94d6b9f263",
-"main.dart.js": "7719e3b719676783d492655920ac1ea5",
+"main.dart.js": "544bc4b5f3707897fcbc2645014cb2fd",
 "assets/LICENSE": "0000d255865246c9b55862d96ffd3089",
 "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
