@@ -28,11 +28,11 @@ class WSHelpAppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('使用帮助'),
-      // ),
-      body: _mainWidget(),
+    return MaterialApp(
+      title: '使用帮助',
+      home: Scaffold(
+        body: _mainWidget(),
+      ),
     );
   }
 }
