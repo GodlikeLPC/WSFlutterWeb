@@ -3,21 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>flutter_web_demo</title>
+  <title>无讼</title>
 </head>
 
 <body>
+  <script type="text/javascript">
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) { return pair[1]; }
+      }
+      return (false);
+    }
+    console.log(getQueryVariable("web_token"))
+    console.log(getQueryVariable("phone"))
+  </script>
+
   <script src="main.dart.js" type="application/javascript"></script>
+
   <!-- <script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=b4d5b370-daf8-11ea-acb6-2529aa1bfe8f&autoShow=true&language=ZHCN' async='async'>
   </script> -->
+
   <script>
-    (function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.charset="utf-8";g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","https://assets-cli.udesk.cn/im_client/js/udeskApi.js","ud");
+      (function (a, h, c, b, f, g) { a["UdeskApiObject"] = f; a[f] = a[f] || function () { (a[f].d = a[f].d || []).push(arguments) }; g = h.createElement(c); g.async = 1; g.charset = "utf-8"; g.src = b; c = h.getElementsByTagName(c)[0]; c.parentNode.insertBefore(g, c) })(window, document, "script", "https://assets-cli.udesk.cn/im_client/js/udeskApi.js", "ud");
     ud({
-        "code": "g007fg6",
-        "mode": "blank",
-        "link": "https://wusongtech.udesk.cn/im_client/?web_plugin_id=11742"
+      "code": "g007fg6",
+      "link": "https://wusongtech.udesk.cn/im_client/?web_plugin_id=11742",
+      "mode": "blank",
+      "customer": {
+        "web_token": getQueryVariable("web_token"),
+        "c_phone": getQueryVariable("phone"),
+      }
     });
-    </script>
+  </script>
 </body>
 
 </html>
