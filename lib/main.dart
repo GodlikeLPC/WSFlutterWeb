@@ -13,20 +13,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '无讼',
+      title: '使用帮助',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       routes: {
+        '/': (context) => WSHelpAppPage(),
         '/WSHelpAppPage': (context) => WSHelpAppPage(),
         '/WSPlatformServiceAgreement': (context) =>
             WSPlatformServiceAgreementPage(),
       },
-      home: Scaffold(
-        body: Center(
-          child: Text('页面参数配置错误'),
-        ),
-      ),
+      // home: Scaffold(
+      //   body: Center(
+      //     child: Text('页面参数配置错误'),
+      //   ),
+      // ),
     );
   }
 }
