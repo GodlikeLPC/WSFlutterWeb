@@ -17,8 +17,9 @@
       }
       return (false);
     }
-    console.log(getQueryVariable("web_token"))
+    console.log(getQueryVariable("name"))
     console.log(getQueryVariable("phone"))
+    console.log(getQueryVariable("email"))
   </script>
 
   <script src="main.dart.js" type="application/javascript"></script>
@@ -31,10 +32,10 @@
     ud({
       "code": "g007fg6",
       "link": "https://wusongtech.udesk.cn/im_client/?web_plugin_id=11742",
-      "mode": "blank",
       "customer": {
-        "web_token": getQueryVariable("web_token"),
+        "c_name": getQueryVariable("name"),
         "c_phone": getQueryVariable("phone"),
+        "c_email": getQueryVariable("email"),
       }
     });
   </script>
