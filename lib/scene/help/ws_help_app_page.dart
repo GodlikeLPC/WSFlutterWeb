@@ -94,6 +94,7 @@ class _WSHelpAppPageState extends State<WSHelpAppPage>
 
   @override
   Widget build(BuildContext context) {
+    print('WSHelpAppPage build');
     return Scaffold(
       backgroundColor: WSColor.colorBgPage,
       // appBar: AppBar(
@@ -373,7 +374,7 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
       child: Container(
         margin: EdgeInsets.only(top: 10, bottom: 100),
         color: WSColor.colorBgContainer,
-        child: ExpansionPanelList(
+        child: ExpansionPanelList.radio(
           expansionCallback: (index, isExpanded) {
             setState(() {
               listQAs[index].isExpanded = !isExpanded;
@@ -381,8 +382,9 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
           },
           children: listQAs
               .map(
-                (e) => ExpansionPanel(
-                  isExpanded: e.isExpanded,
+                (e) => ExpansionPanelRadio(
+                  canTapOnHeader: true,
+                  value: e.question,
                   headerBuilder: (context, isExpanded) {
                     return ListTile(
                       title: LPCText(
@@ -413,6 +415,7 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print('_HelpAppPageBodyWidget build');
     return _mainWidget();
   }
 }
