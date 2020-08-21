@@ -542,11 +542,27 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
   ];
 
   _widgetListViewCell(WSHelpQAModel qaModel) {
-    return ListTile(
-      title: LPCText(
-        qaModel.question,
-        fontSize: WSFont.fontSize14,
-        textColor: WSColor.color333333,
+    return Container(
+      color: WSColor.colorBgContainer,
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
+      child: ListTile(
+        title: SelectableText(
+          qaModel.question,
+          style: TextStyle(
+            fontSize: WSFont.fontSize14,
+            color: WSColor.color333333,
+          ),
+        ),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: SelectableText(
+            qaModel.answer,
+            style: TextStyle(
+              fontSize: WSFont.fontSize14,
+              color: WSColor.color333333,
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -570,53 +586,60 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
         listQAs = _listOtherQAs;
         break;
     }
-    return ListView.separated(
-      shrinkWrap: true,
-      itemCount: listQAs.length,
-      itemBuilder: (BuildContext context, int index) {
-        return _widgetListViewCell(listQAs[index]);
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return LPCLine();
-      },
-    );
-    return SingleChildScrollView(
-      child: Container(
-        margin: EdgeInsets.only(top: 10, bottom: 100),
-        color: WSColor.colorBgContainer,
-        child: ExpansionPanelList.radio(
-          expansionCallback: (index, isExpanded) {
-            setState(() {
-              listQAs[index].isExpanded = !isExpanded;
-            });
-          },
-          children: listQAs
-              .map(
-                (e) => ExpansionPanelRadio(
-                  canTapOnHeader: true,
-                  value: e.question,
-                  headerBuilder: (context, isExpanded) {
-                    return ListTile(
-                      title: LPCText(
-                        e.question,
-                        fontSize: WSFont.fontSize14,
-                        textColor: WSColor.color333333,
-                      ),
-                    );
-                  },
-                  body: ListTile(
-                    title: LPCText(
-                      e.answer,
-                      fontSize: WSFont.fontSize14,
-                      textColor: WSColor.color333333,
-                    ),
-                  ),
-                ),
-              )
-              .toList(),
-        ),
+    return Container(
+      margin: EdgeInsets.only(top: 10),
+      color: WSColor.colorBgContainer,
+      child: ListView.separated(
+        padding: EdgeInsets.only(bottom: 70),
+        physics: BouncingScrollPhysics(),
+        itemCount: listQAs.length,
+        itemBuilder: (BuildContext context, int index) {
+          return _widgetListViewCell(listQAs[index]);
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return LPCLine();
+        },
       ),
     );
+
+    // return SingleChildScrollView(
+    //   physics: BouncingScrollPhysics(),
+    //   child: Container(
+    //     margin: EdgeInsets.only(top: 10, bottom: 100),
+    //     color: WSColor.colorBgContainer,
+    //     child: ExpansionPanelList.radio(
+    //       expansionCallback: (index, isExpanded) {
+    //         setState(() {
+    //           listQAs[index].isExpanded = !isExpanded;
+    //         });
+    //       },
+    //       children: listQAs
+    //           .map(
+    //             (e) => ExpansionPanelRadio(
+    //               canTapOnHeader: true,
+    //               value: e.question,
+    //               headerBuilder: (context, isExpanded) {
+    //                 return ListTile(
+    //                   title: LPCText(
+    //                     e.question,
+    //                     fontSize: WSFont.fontSize14,
+    //                     textColor: WSColor.color333333,
+    //                   ),
+    //                 );
+    //               },
+    //               body: ListTile(
+    //                 title: LPCText(
+    //                   e.answer,
+    //                   fontSize: WSFont.fontSize14,
+    //                   textColor: WSColor.color333333,
+    //                 ),
+    //               ),
+    //             ),
+    //           )
+    //           .toList(),
+    //     ),
+    //   ),
+    // );
   }
 
   _mainWidget() {
