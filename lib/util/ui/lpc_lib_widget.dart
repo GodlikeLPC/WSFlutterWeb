@@ -11,7 +11,7 @@ library lpc_lib_widget;
 // export 'widget/lpc_chip.dart';
 export 'widget/lpc_text.dart';
 export 'widget/lpc_icon.dart';
-// export 'widget/lpc_line.dart';
+export 'widget/lpc_line.dart';
 // export 'widget/lpc_appbar.dart';
 export 'widget/lpc_button.dart';
 // export 'widget/lpc_padding.dart';
