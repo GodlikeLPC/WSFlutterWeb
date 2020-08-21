@@ -18,7 +18,7 @@ export 'widget/lpc_button.dart';
 export 'widget/lpc_sizedbox.dart';
 // export 'widget/lpc_scaffold.dart';
 // export 'widget/lpc_listtile.dart';
-// export 'widget/lpc_container.dart';
+export 'widget/lpc_container.dart';
 // export 'widget/lpc_rich_text.dart';
 // export 'widget/lpc_textfield.dart';
 // export 'widget/lpc_net_image.dart';

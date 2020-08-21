@@ -350,24 +350,26 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
   ];
 
   _widgetListViewCell(WSHelpQAModel qaModel) {
-    return Container(
+    return LPCContainer.cellCard(
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
       color: WSColor.colorBgContainer,
       padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: ListTile(
-        title: SelectableText(
+        title: Text(
           qaModel.question,
           style: TextStyle(
-            fontSize: WSFont.fontSize14,
+            fontWeight: WSFont.fontWeightSemiBold,
+            fontSize: WSFont.fontSize15,
             color: WSColor.color333333,
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 10),
-          child: SelectableText(
+          child: Text(
             qaModel.answer,
             style: TextStyle(
-              fontSize: WSFont.fontSize14,
-              color: WSColor.color333333,
+              fontSize: WSFont.fontSize13,
+              color: WSColor.color666666,
             ),
           ),
         ),
@@ -395,8 +397,8 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
         break;
     }
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      color: WSColor.colorBgContainer,
+      margin: EdgeInsets.only(top: 10, left: 15, right: 15),
+      // color: WSColor.colorBgContainer,
       child: ListView.separated(
         padding: EdgeInsets.only(bottom: 70),
         physics: BouncingScrollPhysics(),
@@ -405,7 +407,8 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
           return _widgetListViewCell(listQAs[index]);
         },
         separatorBuilder: (BuildContext context, int index) {
-          return LPCLine();
+          return LPCSizedBox.shrink();
+          // return LPCLine();
         },
       ),
     );
