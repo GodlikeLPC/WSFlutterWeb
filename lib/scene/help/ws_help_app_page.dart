@@ -20,7 +20,7 @@ class WSHelpAppPage extends StatefulWidget {
 
 class _WSHelpAppPageState extends State<WSHelpAppPage>
     with SingleTickerProviderStateMixin {
-  List<String> _tabBottomValues = ['账户问题', '无讼学院', '律师协作', '无讼检索', '其他'];
+  List<String> _tabBottomValues = ['账户问题', '无讼学院', '律师协作', '案例检索', '其他'];
 
   TabController _tabBottomController;
 
@@ -144,19 +144,20 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
     ),
     WSHelpQAModel(
       question: '如果解绑，更换手机号？',
-      answer: '',
+      answer: '打开无讼App【我的】页面 -通过右上方图标进入【设置】页面-【账号设置】-【绑定手机】',
     ),
     WSHelpQAModel(
       question: '更换手机号之后会对账户原有的信息有什么影响？比如已购课程，无讼币，课程学习等方面',
-      answer: '',
+      answer:
+          '无讼App上数据不会影响。但如您曾在小鹅通无讼学院店铺购买过课程，在更换绑定手机号之后，需再次登录小鹅通账户并修改手机号，以便信息同步。',
     ),
     WSHelpQAModel(
       question: '如何修改个人信息？',
-      answer: '',
+      answer: '打开无讼App【我的】页面-左上方头像及名字区域-【个人设置】，即可修改个人基本资料',
     ),
     WSHelpQAModel(
       question: '如何修改登录密码？',
-      answer: '',
+      answer: '打开无讼App【我的】页面 -通过右上方图标进入【设置】页面-【账号设置】-【修改密码】',
     ),
   ];
 
@@ -297,31 +298,36 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
     ),
   ];
 
-  /// 无讼检索
-  List<WSHelpQAModel> _listWSJSQAs = [
+  /// 案例检索
+  List<WSHelpQAModel> _listALJSQAs = [
+    WSHelpQAModel(
+      question: '可以在电脑上使用检索功能吗？',
+      answer: '可通过电脑浏览器访问www.itslaw.com 网站进行登录检索。',
+    ),
     WSHelpQAModel(
       question: '无讼案例搜索入口',
-      answer: '',
+      answer: '可通过无讼App【首页】顶部检索框、【首页】-【案例检索】、【工具】顶部检索框，',
     ),
     WSHelpQAModel(
-      question: '案例涉及到侵权怎么办',
-      answer: '',
+      question: '中国裁判文书网已经下线的案例文书如何申请在无讼App上下线？',
+      answer: '可通过在线留言的方式反馈相关案号给工作人员，核实后将进行下线处理。',
     ),
     WSHelpQAModel(
-      question: '无讼案例怎么进行高级搜索，规定搜索范围',
-      answer: '',
+      question: '无讼案例怎么进行高级搜索，规定搜索范围？',
+      answer: '在检索框中输入“？”可打开高级检索的引导页面',
     ),
     WSHelpQAModel(
       question: '搜索到的法规过期如何处理',
-      answer: '',
+      answer: '可通过在线留言的方式反馈对应法规给工作人员，核实后将进行更新。',
     ),
     WSHelpQAModel(
       question: '输入了关键字搜索之后，无法加载出内容',
-      answer: '',
+      answer:
+          '请确认您的网络通讯状况良好，也可重启App进行再次加载；如您依然遇见问题，建议使用电脑浏览器访问www.itslaw.com 无讼案例官网进行检索使用。',
     ),
     WSHelpQAModel(
       question: '检索出来的案例和法规如何进行下载，收藏，生成在线报告？',
-      answer: '',
+      answer: '目前无讼App暂不支持案例下载，您可通过电脑浏览器访问www.itslaw.com 无讼案例官网进行检索并下载。',
     ),
   ];
 
@@ -329,23 +335,26 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
   List<WSHelpQAModel> _listOtherQAs = [
     WSHelpQAModel(
       question: '关于无讼',
-      answer: '',
+      answer:
+          '无讼网络科技（北京）有限公司是一家诞生于故宫东600米四合院内的法律+互联网科技公司。2014年成立以来，无讼已获得顶级投资机构IDG资本2700万元A轮融资和华创资本、IDG资本的1.2亿元B轮融资。'
+          '作为一家法律+互联网公司，无讼具备法律与互联网的双重背景：'
+          '孵化于国内顶尖的律师事务所——天同律师事务所。天同在高端商事诉讼领域17年的专业服务经验是无讼法律基因的来源。同时在业务发展过程中无讼先后服务了阿里巴巴、58集团等众多知名企业，积累了大量企业端的专业法律事务的服务经验和标准流程。'
+          '自成立之初无讼就构建了强大的产品研发团队（产品研发人员占比65%以上）。先后推出了多款领先法律行业的热门互联网产品：无讼案例、无讼法规、无讼名片、无讼合作、人工智能法小淘等，受到行业广泛关注。'
+          '无讼希望基于专业法律服务的基因，借助互联网和先进信息技术，构建更加公平正义的法律服务平台，成为人人信赖的法律伙伴。',
     ),
     WSHelpQAModel(
       question: '联系我们',
-      answer: '',
-    ),
-    WSHelpQAModel(
-      question: '商务合作',
-      answer: '',
+      answer: '官方服务电话：400-010-5353'
+          '（工作日：9:00-18:00）'
+          '地址：北京市东城区南河沿大街南湾子胡同16号',
     ),
     WSHelpQAModel(
       question: '是否支持文章投稿？',
-      answer: '',
+      answer: '目前暂不支持个人文章投稿，如有其他合作需求，可访问www.wusong.com无讼官网进行沟通',
     ),
     WSHelpQAModel(
       question: '加入我们',
-      answer: '',
+      answer: '简历投递：hr@wusongtech.com',
     ),
   ];
 
@@ -389,8 +398,8 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
       case '律师协作':
         listQAs = _listLSXZQAs;
         break;
-      case '无讼检索':
-        listQAs = _listWSJSQAs;
+      case '案例检索':
+        listQAs = _listALJSQAs;
         break;
       case '其他':
         listQAs = _listOtherQAs;
