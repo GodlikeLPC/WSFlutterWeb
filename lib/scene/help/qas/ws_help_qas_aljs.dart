@@ -16,7 +16,7 @@ List<WSHelpQAModel> listALJSQAs = [
   ),
   WSHelpQAModel(
     question: '无讼案例搜索入口',
-    answer: '可通过无讼App【首页】顶部检索框、【首页】-【案例检索】、【工具】顶部检索框，',
+    answer: '无讼App【首页】顶部检索框、【首页】-【案例检索】、【工具】顶部检索框，以上三个入口均可进入无讼案例检索',
   ),
   WSHelpQAModel(
     question: '中国裁判文书网已经下线的案例文书如何申请在无讼App上下线？',
