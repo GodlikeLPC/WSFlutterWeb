@@ -6,10 +6,41 @@
  *  @update: 
 */
 
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_web/scene/agreement/ws_platform_service_agreement_page.dart';
+import 'package:flutter_web/scene/agreement/ws_privacy_agreement_page.dart';
+import 'package:flutter_web/scene/help/ws_help_app_page.dart';
 import 'package:flutter_web/util/config/ws_config.dart';
 
 class WSRouter {
+  static Map<String, Widget Function(BuildContext)> routersConfig() {
+    return {
+      /// 主页
+      '/': (context) {
+        return WSHelpAppPage();
+      },
+
+      /// 帮助中心
+      '/WSHelpAppPage': (context) {
+        document.title = '帮助中心';
+        return WSHelpAppPage();
+      },
+
+      /// 隐私协议
+      '/WSPrivacyAgreementPage': (context) {
+        document.title = '隐私协议';
+        return WSPrivacyAgreementPage();
+      },
+
+      /// 平台服务协议
+      '/WSPlatformServiceAgreement': (context) =>
+          WSPlatformServiceAgreementPage(),
+    };
+  }
+
   static popFlutter(BuildContext context) {
     switch (WSConfig.integrationType) {
       case IntegrationType.Mixed:

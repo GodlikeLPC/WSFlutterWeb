@@ -120,7 +120,7 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
         title: Text(
           qaModel.question,
           style: TextStyle(
-            fontWeight: WSFont.fontWeightSemiBold,
+            fontWeight: WSFont.fontWeightBold,
             fontSize: WSFont.fontSize15,
             color: WSColor.color333333,
           ),
@@ -143,19 +143,19 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
     List<WSHelpQAModel> listQAs;
     switch (type) {
       case '账户问题':
-        listQAs = listZHWTQAs;
+        listQAs = WSHelpQAsAccount.listQAs();
         break;
       case '无讼学院':
-        listQAs = listWSXYQAs;
+        listQAs = WSHelpQAsCollege.listQAs();
         break;
       case '律师协作':
-        listQAs = listLSXZQAs;
+        listQAs = WSHelpQAsLawyersCooperation.listQAs();
         break;
       case '案例检索':
-        listQAs = listALJSQAs;
+        listQAs = WSHelpQAsCaseRetrieval.listQAs();
         break;
       case '其他':
-        listQAs = listOtherQAs;
+        listQAs = WSHelpQAsOthers.listQAs();
         break;
     }
     return Container(

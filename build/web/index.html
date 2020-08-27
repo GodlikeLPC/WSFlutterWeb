@@ -3,11 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>帮助中心</title>
+  <title>无讼</title>
 </head>
 
 <body>
   <script type="text/javascript">
+    /// 获取路径页面
+    function getPageName() {
+      var query = window.location.href;
+      var vars = query.split("/");
+      return vars[vars.length - 1];
+    }
+    var pageName = getPageName()
+    console.log('pageName = ' + pageName)
+
+    /// 获取参数
     function getQueryVariable(variable) {
       var query = window.location.search.substring(1);
       var vars = query.split("&");
@@ -17,9 +27,9 @@
       }
       return (false);
     }
-    console.log(decodeURI(getQueryVariable("name")))
-    console.log(getQueryVariable("phone"))
-    console.log(getQueryVariable("email"))
+    console.log('name = ' + decodeURI(getQueryVariable("name")))
+    console.log('phone = ' + getQueryVariable("phone"))
+    console.log('email = ' + getQueryVariable("email"))
   </script>
 
   <script src="main.dart.js" type="application/javascript"></script>
@@ -27,17 +37,22 @@
   <!-- <script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=b4d5b370-daf8-11ea-acb6-2529aa1bfe8f&autoShow=true&language=ZHCN' async='async'>
   </script> -->
 
-  <script>
-      (function (a, h, c, b, f, g) { a["UdeskApiObject"] = f; a[f] = a[f] || function () { (a[f].d = a[f].d || []).push(arguments) }; g = h.createElement(c); g.async = 1; g.charset = "utf-8"; g.src = b; c = h.getElementsByTagName(c)[0]; c.parentNode.insertBefore(g, c) })(window, document, "script", "https://assets-cli.udesk.cn/im_client/js/udeskApi.js", "ud");
-    ud({
-      "code": "g007fg6",
-      "link": "https://wusongtech.udesk.cn/im_client/?web_plugin_id=11742",
-      "customer": {
-        "c_name": decodeURI(getQueryVariable("name")),
-        "c_phone": getQueryVariable("phone"),
-        "c_email": getQueryVariable("email"),
+  <script type="text/javascript">
+    window.onload = function () {
+      /// 帮助中心显示在线咨询模块
+      if (pageName == 'WSHelpAppPage') {
+        (function (a, h, c, b, f, g) { a["UdeskApiObject"] = f; a[f] = a[f] || function () { (a[f].d = a[f].d || []).push(arguments) }; g = h.createElement(c); g.async = 1; g.charset = "utf-8"; g.src = b; c = h.getElementsByTagName(c)[0]; c.parentNode.insertBefore(g, c) })(window, document, "script", "https://assets-cli.udesk.cn/im_client/js/udeskApi.js", "ud");
+        ud({
+          "code": "g007fg6",
+          "link": "https://wusongtech.udesk.cn/im_client/?web_plugin_id=11742",
+          "customer": {
+            "c_name": decodeURI(getQueryVariable("name")),
+            "c_phone": getQueryVariable("phone"),
+            "c_email": getQueryVariable("email"),
+          }
+        });
       }
-    });
+    }
   </script>
 </body>
 
