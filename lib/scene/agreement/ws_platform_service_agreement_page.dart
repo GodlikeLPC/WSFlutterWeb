@@ -6,8 +6,6 @@
  *  @update: 2020/07/15 20:23:48 神灬渐入嘉靜
 */
 
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 import 'content/ws_platform_service_agreement_context.dart';
@@ -15,13 +13,6 @@ import 'content/ws_platform_service_agreement_context.dart';
 /// 无讼平台服务协议
 class WSPlatformServiceAgreementPage extends StatelessWidget {
   _mainWidget() {
-    return FlatButton(
-      onPressed: () {
-        // window.document. .postMessage('jsMsgTitleUpdate', 'jsMsgTitleUpdate');
-// jsMsgTitleUpdate.postMessage("JS调用了Flutter");
-      },
-      child: Text('brnwuibvowrnvuiewbuinweuinvowenkvwenke'),
-    );
     return ListView(
       padding: EdgeInsets.all(15),
       physics: BouncingScrollPhysics(),

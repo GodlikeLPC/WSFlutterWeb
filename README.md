@@ -3,3 +3,5 @@
 
 
 window.location.href = 'closewindow:navigation';
+
+js.context['jsMsgTitleUpdate'].callMethod("postMessage", [title]);

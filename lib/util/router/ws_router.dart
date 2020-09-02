@@ -8,6 +8,8 @@
 
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_web/scene/agreement/ws_platform_service_agreement_page.dart';
@@ -17,27 +19,39 @@ import 'package:flutter_web/util/config/ws_config.dart';
 
 class WSRouter {
   static Map<String, Widget Function(BuildContext)> routersConfig() {
+    /// 更新标题
+    _updateTitle(String title) {
+      ///html
+      document.title = title;
+
+      ///native
+      js.context['jsMsgTitleUpdate'].callMethod("postMessage", [title]);
+    }
+
     return {
       /// 主页
       '/': (context) {
+        _updateTitle('无讼');
         return WSHelpAppPage();
       },
 
       /// 帮助中心
       '/WSHelpAppPage': (context) {
-        document.title = '帮助中心';
+        _updateTitle('帮助中心');
         return WSHelpAppPage();
       },
 
       /// 隐私协议
       '/WSPrivacyAgreementPage': (context) {
-        document.title = '隐私协议';
+        _updateTitle('隐私协议');
         return WSPrivacyAgreementPage();
       },
 
       /// 平台服务协议
-      '/WSPlatformServiceAgreement': (context) =>
-          WSPlatformServiceAgreementPage(),
+      '/WSPlatformServiceAgreement': (context) {
+        _updateTitle('服务协议');
+        return WSPlatformServiceAgreementPage();
+      }
     };
   }
 
