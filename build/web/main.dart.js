@@ -5959,9 +5959,9 @@ this.a=c},
 zR:function zR(){},
 B5:function B5(){},
 a_E:function(){var t=new X.Ln()
-return P.bj(["/",new X.Lo(t),"/WSHelpAppPage",new X.Lp(t),"/WSPrivacyAgreementPage",new X.Lq(t),"/WSPlatformServiceAgreement",new X.Lr(t)],u.N,u.hw)},
+return P.bj(["/",new X.Lo(),"/WSHelpAppPage",new X.Lp(t),"/WSPrivacyAgreementPage",new X.Lq(t),"/WSPlatformServiceAgreement",new X.Lr(t)],u.N,u.hw)},
 Ln:function Ln(){},
-Lo:function Lo(a){this.a=a},
+Lo:function Lo(){},
 Lp:function Lp(a){this.a=a},
 Lq:function Lq(a){this.a=a},
 Lr:function Lr(a){this.a=a}},G={
@@ -38342,8 +38342,7 @@ X.Ln.prototype={
 $1:function(a){document.title=a
 $.Qs().i(0,"jsMsgTitleUpdate").aH("postMessage",H.b([a],u.s))}}
 X.Lo.prototype={
-$1:function(a){this.a.$1("\u65e0\u8bbc")
-return new E.hv(null)},
+$1:function(a){return new E.hv(null)},
 $S:54}
 X.Lp.prototype={
 $1:function(a){this.a.$1("\u5e2e\u52a9\u4e2d\u5fc3")

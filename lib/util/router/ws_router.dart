@@ -31,7 +31,7 @@ class WSRouter {
     return {
       /// 主页
       '/': (context) {
-        _updateTitle('无讼');
+        // _updateTitle('无讼');
         return WSHelpAppPage();
       },
 
