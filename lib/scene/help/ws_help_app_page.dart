@@ -19,8 +19,7 @@ class WSHelpAppPage extends StatefulWidget {
   _WSHelpAppPageState createState() => _WSHelpAppPageState();
 }
 
-class _WSHelpAppPageState extends State<WSHelpAppPage>
-    with SingleTickerProviderStateMixin {
+class _WSHelpAppPageState extends State<WSHelpAppPage> with SingleTickerProviderStateMixin {
   List<String> _tabBottomValues = ['账户问题', '无讼学院', '律师协作', '案例检索', '其他'];
 
   TabController _tabBottomController;
@@ -72,9 +71,7 @@ class _WSHelpAppPageState extends State<WSHelpAppPage>
         Expanded(
           child: TabBarView(
             controller: _tabBottomController,
-            children: _tabBottomValues
-                .map((e) => _HelpAppPageBodyWidget(type: e))
-                .toList(),
+            children: _tabBottomValues.map((e) => _HelpAppPageBodyWidget(type: e)).toList(),
           ),
         ),
       ],
@@ -84,7 +81,15 @@ class _WSHelpAppPageState extends State<WSHelpAppPage>
   @override
   Widget build(BuildContext context) {
     print('WSHelpAppPage build');
-    return Scaffold(
+    return
+        //  MaterialApp(
+        //   debugShowCheckedModeBanner: false,
+        //   title: '帮助中心',
+        //   theme: ThemeData(
+        //     primarySwatch: Colors.blue,
+        //   ),
+        //   home:
+        Scaffold(
       backgroundColor: WSColor.colorBgPage,
       // appBar: AppBar(
       //   backgroundColor: WSColor.colorBgContainer,
@@ -97,6 +102,7 @@ class _WSHelpAppPageState extends State<WSHelpAppPage>
       //   bottom: _widgetTabbar(),
       // ),
       body: _mainWidget(),
+      // ),
     );
   }
 }

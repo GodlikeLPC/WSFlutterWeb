@@ -30,21 +30,21 @@ class WSRouter {
 
     return {
       /// 主页
-      '/': (context) {
-        // _updateTitle('无讼');
-        return Scaffold(
-          body: Center(
-              child: Text(
-            '帮助中心\n\n'
-            'WSHelpAppPage\n\n\n\n'
-            '隐私协议\n\n'
-            'WSPrivacyAgreementPage\n\n\n\n'
-            '服务协议\n\n'
-            'WSPlatformServiceAgreement\n\n\n\n',
-            textAlign: TextAlign.center,
-          )),
-        );
-      },
+      // '/': (context) {
+      //   // _updateTitle('无讼');
+      //   return Scaffold(
+      //     body: Center(
+      //         child: Text(
+      //       '帮助中心\n\n'
+      //       'WSHelpAppPage\n\n\n\n'
+      //       '隐私协议\n\n'
+      //       'WSPrivacyAgreementPage\n\n\n\n'
+      //       '服务协议\n\n'
+      //       'WSPlatformServiceAgreement\n\n\n\n',
+      //       textAlign: TextAlign.center,
+      //     )),
+      //   );
+      // },
 
       /// 帮助中心
       '/WSHelpAppPage': (context) {
