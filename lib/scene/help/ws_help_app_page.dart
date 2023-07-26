@@ -20,7 +20,7 @@ class WSHelpAppPage extends StatefulWidget {
 }
 
 class _WSHelpAppPageState extends State<WSHelpAppPage> with SingleTickerProviderStateMixin {
-  List<String> _tabBottomValues = ['账户问题', '无讼学院', '律师协作', '案例检索', '其他'];
+  List<String> _tabBottomValues = ['账户问题', '**学院', '律师协作', '案例检索', '其他'];
 
   TabController _tabBottomController;
 
@@ -151,7 +151,7 @@ class _HelpAppPageBodyWidgetState extends State<_HelpAppPageBodyWidget> {
       case '账户问题':
         listQAs = WSHelpQAsAccount.listQAs();
         break;
-      case '无讼学院':
+      case '**学院':
         listQAs = WSHelpQAsCollege.listQAs();
         break;
       case '律师协作':

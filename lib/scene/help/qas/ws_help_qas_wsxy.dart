@@ -9,16 +9,16 @@
 import 'package:flutter_web/model/help/ws_help_qa_model.dart';
 
 class WSHelpQAsCollege {
-  /// 无讼学院
+  /// **学院
   static List<WSHelpQAModel> listQAs() {
     return [
       WSHelpQAModel(
-        question: '如何购买无讼学院课程？',
-        answer: '进入【无讼APP】-【学习】页面，选择要购买的课程进入课程详情页后点击右下方购买按钮即可实现购买（课程只支持无讼币购买）',
+        question: '如何购买**学院课程？',
+        answer: '进入【**APP】-【学习】页面，选择要购买的课程进入课程详情页后点击右下方购买按钮即可实现购买（课程只支持**币购买）',
       ),
       WSHelpQAModel(
         question: '购买之后可以在哪里看到购买记录？',
-        answer: '进入【无讼APP】-【我的】页面 -【课程学习】-【已购课程】中可查看已购课程',
+        answer: '进入【**APP】-【我的】页面 -【课程学习】-【已购课程】中可查看已购课程',
       ),
       WSHelpQAModel(
         question: '学院的课程可以在电脑端观看吗？',
@@ -30,7 +30,7 @@ class WSHelpQAsCollege {
       ),
       WSHelpQAModel(
         question: '购买的课程怎么开具发票？',
-        answer: '进入【无讼APP】-【我的】页面 - 点击【消费记录】详情页 - 点击右上角【开发票】可自助开票',
+        answer: '进入【**APP】-【我的】页面 - 点击【消费记录】详情页 - 点击右上角【开发票】可自助开票',
       ),
       WSHelpQAModel(
         question: '课程更新需要多久？',
@@ -49,16 +49,16 @@ class WSHelpQAsCollege {
         answer: '获取到优惠券后，可在购买课程时选择使用优惠券',
       ),
       WSHelpQAModel(
-        question: '无讼币的用途？',
-        answer: '无讼币作为虚拟币目前仅用于购买APP内的虚拟内容(不含实务和产品)',
+        question: '**币的用途？',
+        answer: '**币作为虚拟币目前仅用于购买APP内的虚拟内容(不含实务和产品)',
       ),
       WSHelpQAModel(
-        question: '如何充值无讼币?',
-        answer: '进入【无讼APP】-【我的】页面 - 点击【我的账户】进入详情页进行充值',
+        question: '如何充值**币?',
+        answer: '进入【**APP】-【我的】页面 - 点击【我的账户】进入详情页进行充值',
       ),
       WSHelpQAModel(
         question: '如何使用律协免单资格？',
-        answer: '若您所在的律协已经和无讼合作组织培训，您可以在购课时选择律协免单支付购买课程',
+        answer: '若您所在的律协已经和**合作组织培训，您可以在购课时选择律协免单支付购买课程',
       ),
       WSHelpQAModel(
         question: '优惠券可以叠加使用吗？',

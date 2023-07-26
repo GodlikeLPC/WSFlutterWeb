@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 import 'content/ws_platform_service_agreement_context.dart';
 
-/// 无讼平台服务协议
+/// **平台服务协议
 class WSPlatformServiceAgreementPage extends StatelessWidget {
   _mainWidget() {
     return ListView(

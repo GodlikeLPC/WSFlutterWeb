@@ -27,11 +27,11 @@ class WSHelpQAsLawyersCooperation {
       ),
       WSHelpQAModel(
         question: '发单后，我如何收到律师应征的提示?',
-        answer: '可以在无讼App或【无讼】微信公众号查看订单',
+        answer: '可以在**App或【**】微信公众号查看订单',
       ),
       WSHelpQAModel(
         question: '应征的律师不能满足我的要求怎么办?',
-        answer: '如您已经支付款项，可以致电无讼4000105353转2进行撤单',
+        answer: '如您已经支付款项，可以致电**4000105353转2进行撤单',
       ),
       WSHelpQAModel(
         question: '律师的应征报价是否等于最终的价格?',
@@ -43,7 +43,7 @@ class WSHelpQAsLawyersCooperation {
       ),
       WSHelpQAModel(
         question: '我怎么知道有发单律师需要在本地查档、执行或者合作呢?',
-        answer: '您可以通过无讼App【首页】-【律师协作】-【协作广场】查询订单',
+        answer: '您可以通过**App【首页】-【律师协作】-【协作广场】查询订单',
       ),
       WSHelpQAModel(
         question: '我应征后，其他律师还可以就同一订单应征吗?',
@@ -76,7 +76,7 @@ class WSHelpQAsLawyersCooperation {
       ),
       WSHelpQAModel(
         question: '支付费用之后，因特殊原因双方协商好之后想要撤单可以吗？',
-        answer: '订单是可以撤单的，可以致电无讼4000105353转2进行撤单',
+        answer: '订单是可以撤单的，可以致电**4000105353转2进行撤单',
       ),
     ];
   }

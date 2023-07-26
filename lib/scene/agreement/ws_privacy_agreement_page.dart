@@ -11,7 +11,7 @@ import 'package:flutter_web/scene/agreement/content/ws_privacy_agreement_content
 import 'package:flutter_web/util/config/ws_config.dart';
 import 'package:flutter_web/util/ui/lpc_lib_widget.dart';
 
-/// 无讼隐私协议
+/// **隐私协议
 class WSPrivacyAgreementPage extends StatelessWidget {
   _mainWidget() {
     return ListView(
